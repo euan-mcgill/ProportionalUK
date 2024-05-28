@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Proportional Representation for the UK</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="PR, proportional representation, electoral reform, United Kingdom, England, UK, Britain, GB, devolution, devolved parliament, devolved assembly, D'Hondt method, mixed member system, alternative vote, voting">
+<meta name="description" content="Proportional representation and greater devolution for all United Kingdom elections">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+* {
+  box-sizing: border-box;
+}
+h2 {
+	color: #111111;
+	margin-left: 60px;
+	font-size: 160%;
+}
+p {
+	font-size: 120%;
+	margin-right: 60px;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #C9FFD1;
+}
+
+/* Style the side navigation */
+.topnav {
+  background-color: #F2F2F2;
+  overflow-x: visible;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 80%;
+
+}
+
+
+/* Side navigation links */
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #C9FFD1;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  padding-left: 20px;
+
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #C9FFD1;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+</style>
+</head>
+<body>
+
+<div class="topnav"> 
+  <a href="#index">Home</a>
+    <div class="dropdown">
+    <button class="dropbtn">Elections
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#2019">GE 2019</a>
+      <a href="#1997">GE 1997</a>
+    </div>
+  </div>
+    <div class="dropdown">
+    <button class="dropbtn">Polls
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#2024-05">May 2024</a>
+    </div>
+  </div>
+  <a href="#HoLr">HoL Reform</a>
+</a>
+</div>
+
+<div class="content" style="padding-top: 90px;">
+
+<h2><a name="overview">Overview</a></h2>
+
+<p align="justify"> British democracy consistently evolves with the times, as is the nature of our <a href="https://en.wikipedia.org/wiki/Constitution_of_the_United_Kingdom#Principles">unwritten constitution</a>, to suit the needs and hear the voices of all the people. In the current system members of parliament are elected to a lower and upper house. The lower House of Commons is made up of 650 single-member constituencies. Whoever receives the plurality of votes in a constituency gains a seat in parliament. In an extreme example, Belfast South was won by just 24.5% of the vote in 2015 — reflecting less than a quarter of that constituency’s preference. In the upper House of Lords, all members are appointed for life - giving the public no say on the members of the upper house who scrutinise legislation. A system where large governing majorities are won by around 40% of the vote, and where one house is completely unelected, immediately seems unrepresentative.</p>
+
+<p align="justify">There have been many studies into implementing a form of PR at individual elections (<a href="https://www.tandfonline.com/doi/abs/10.1080/13572339808420557">1998</a>, <a href="https://blogs.lse.ac.uk/politicsandpolicy/what-would-the-election-look-like-under-pr/">2015</a>, <a href="https://www.electoral-reform.org.uk/how-the-2019-election-results-could-have-looked-with-proportional-representation/">2019</a>), but not how one method would have shaped the face of British politics over time. This page first examines proposals made by the Cameron-Clegg coalition, and later discussed by the Brown Commission and Labour party, to reform the House of Lords to a mostly-elected chamber. Then, we use historical General Election data to model previous elections as if they were conducted through proportional representation in multi-member geographical constituencies.</p>
+
+<p align="justify">The scripts and data used to generate these results can be found, reproduced, and ran through <a href="https://github.com/euan-mcgill/euan-projects/tree/master/pol">this GitHub repo</a> <i class="fa-brands fa-github"></i> (Embedded tool coming soon!)</p>
+
+<p></p>
+
+<footer style="margin-top: 300px; margin-left: 220px;">
+  <p style="font-size: 75%;" align="right"> Site is based on a template from <a href="https://www.w3schools.com">https://www.w3schools.com</a>. Copyright © 2024 Euan McGill. All rights reserved </p>
+</footer>
+
+</body>
+</html>
