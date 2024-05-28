@@ -13,7 +13,7 @@
 }
 h2 {
 	color: #111111;
-	margin-left: 60px;
+	margin-left: 30px;
 	font-size: 160%;
 }
 p {
@@ -124,8 +124,8 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#2019">GE 2019</a>
-      <a href="#1997">GE 1997</a>
+      <a href="GE2019.html">GE 2019</a>
+      <a href="GE2010.html">GE 2010</a>
     </div>
   </div>
     <div class="dropdown">
@@ -140,17 +140,28 @@ body {
 </a>
 </div>
 
-<div class="content" style="padding-top: 90px;">
+<div class="content" style="padding-top: 60px;">
 
 <h2><a name="overview">Overview</a></h2>
 
 <p align="justify"> British democracy consistently evolves with the times, as is the nature of our <a href="https://en.wikipedia.org/wiki/Constitution_of_the_United_Kingdom#Principles">unwritten constitution</a>, to suit the needs and hear the voices of all the people. In the current system members of parliament are elected to a lower and upper house. The lower House of Commons is made up of 650 single-member constituencies. Whoever receives the plurality of votes in a constituency gains a seat in parliament. In an extreme example, Belfast South was won by just 24.5% of the vote in 2015 — reflecting less than a quarter of that constituency’s preference. In the upper House of Lords, all members are appointed for life - giving the public no say on the members of the upper house who scrutinise legislation. A system where large governing majorities are won by around 40% of the vote, and where one house is completely unelected, immediately seems unrepresentative.</p>
 
-<p align="justify">There have been many studies into implementing a form of PR at individual elections (<a href="https://www.tandfonline.com/doi/abs/10.1080/13572339808420557">1998</a>, <a href="https://blogs.lse.ac.uk/politicsandpolicy/what-would-the-election-look-like-under-pr/">2015</a>, <a href="https://www.electoral-reform.org.uk/how-the-2019-election-results-could-have-looked-with-proportional-representation/">2019</a>), but not how one method would have shaped the face of British politics over time. This page first examines proposals made by the Cameron-Clegg coalition, and later discussed by the Brown Commission and Labour party, to reform the House of Lords to a mostly-elected chamber. Then, we use historical General Election data to model previous elections as if they were conducted through proportional representation in multi-member geographical constituencies.</p>
+<p align="justify">There have been many studies into implementing a form of PR at individual elections (<a href="https://www.tandfonline.com/doi/abs/10.1080/13572339808420557">1998</a>, <a href="https://blogs.lse.ac.uk/politicsandpolicy/what-would-the-election-look-like-under-pr/">2015</a>, <a href="https://www.electoral-reform.org.uk/how-the-2019-election-results-could-have-looked-with-proportional-representation/">2019</a>), but not how one method would have shaped the face of British politics over time. We use historical General Election data to model previous elections as if they were conducted through proportional representation in multi-member geographical constituencies. This page also examines proposals made by the Cameron-Clegg coalition, and later discussed by the Brown Commission and Labour party, to reform the House of Lords to a mostly-elected chamber.</p>
 
 <p align="justify">The scripts and data used to generate these results can be found, reproduced, and ran through <a href="https://github.com/euan-mcgill/euan-projects/tree/master/pol">this GitHub repo</a> <i class="fa-brands fa-github"></i> (Embedded tool coming soon!)</p>
 
-<p></p>
+<hr>
+
+<div class="content">
+<h2><a name="HoCc">House of Commons - proportionally elected based on UK counties</a></h2>
+
+<p align='justify'>A common criticism of proportional system is that they do not allow local representation. This simulation, which instead takes smaller 'Counties' instead of regions allows multi-member consituencies for each provided county in the dataset which is similar to the current electoral system in Spain. The administrative divisions used are those used in the <a href="https://www.electoralcalculus.co.uk/flatfile.html">Electoral Calculus historical data</a> of the 1955-2019 UK General Elections. These are mostly the historical counties of England, Scotland, Wales and Northern Ireland, with some slight modifications. These include separating London into all 32 boroughs, splitting both Greater Manchester and the West Midlands conurbation into three parts respectively, and splitting the former 'Strathclyde' region in two parts. A map is shown below outlining the regions, and a description can be found <a href="https://www.electoralcalculus.co.uk/area_defns_eu.html">here</a>.</p>
+
+<p align="center"><img class="fit" src="area_map_large.jpg" width=760px></p>
+
+<p align='justify'>The number of seats per multi-member constituency again vary greatly, and are calculated by the size of the electorate in each for their proportion of seats among the 630-659 in parliaments between 1955-2019. Among the 2019 seats, Na h-Eileanan an Iar (the Western Isles) in Scotland has a population too small to gain any seats. It is therefore given one seat each so it is not left unrepresented.</p>
+
+<p align='justify'>There are a number of other seats with one or two representatives such as Argyll and Bute (Scotland, one seat), Powys (Wales, one seat), London Borough of Kingston-upon-Thames (England, one seat). The largest seats are West Yorkshire (England, 22 seats), Hampshire (England, 20 seats), Kent and Essex (England, both 18 seats), and the Glasgow area (Scotland, 15 seats). Constituencies with one seat are by far the minority, but by default they continue to provide 'First-Past-the-Post' style representation for their communities. This may contribute to the differences we see between results in this scenario versus a model with the twelve larger regions.</p>
 
 <footer style="margin-top: 300px; margin-left: 220px;">
   <p style="font-size: 75%;" align="right"> Site is based on a template from <a href="https://www.w3schools.com">https://www.w3schools.com</a>. Copyright © 2024 Euan McGill. All rights reserved </p>
