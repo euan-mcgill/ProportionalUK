@@ -1,0 +1,4 @@
+baseURL = 'https://ProportionalUK.github.io/'
+locale = 'en-gb'
+title = 'United Kingdom elections with Proportional Representation in geographical constituencies.'
+theme = 'congo'
