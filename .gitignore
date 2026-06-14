@@ -1,0 +1,21 @@
+# Hugo default output directory
+/public/
+
+# Resources directory (generated images, asset caches, sass/scss compilation)
+/resources/
+
+# Local server cache and lock files
+/.hugo_build.lock
+/assets/jsconfig.json
+
+# If you use Hugo Modules, ignore the local cache
+/.hugo_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
