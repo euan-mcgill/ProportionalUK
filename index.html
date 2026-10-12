@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All elections | ProportionalUK</title>
+<meta name="description" content="Home: Browse Proportional UK election and poll results, newest first">
+<style>
+:root {
+  --bg: #e8f5e9;
+  --card: #ffffff;
+  --accent: #2e7d32;
+  --text: #1b2a1e;
+  --gutter: 8px;
+  --radius: 8px;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px var(--gutter);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(46, 125, 50, 0.15);
+}
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+nav { display: flex; flex-wrap: wrap; gap: 8px; }
+nav a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.15s, color 0.15s;
+}
+nav a:hover, nav a:focus-visible, nav a[aria-current="page"] {
+  background: var(--accent);
+  color: #fff;
+}
+main { padding: var(--gutter); }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: var(--gutter);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.gallery li { min-width: 0; }
+.election {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 12px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  text-decoration: none;
+}
+.election:hover h2 { text-decoration: underline; }
+.election:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+.election img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+.election h2 {
+  margin: 12px 0 0;
+  font-size: 1.2rem;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 900px) {
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>All elections</h1>
+  <nav>
+    <a href="index.html" aria-current="page">All elections</a>
+    <a href="about.html">About</a>
+    <a href="compare.html">Compare</a>
+  </nav>
+</header>
+
+<main>
+  <ul class="gallery" aria-label="Elections and polls, newest first">
+    <li>
+      <a class="election" href="2026-08.html">
+        <img src="election_maps/2026-08_District.svg" alt="District results map for the August 2026 poll">
+        <h2>August 2026 Poll</h2>
+      </a>
+    </li>
+    <li>
+      <a class="election" href="2024.html">
+        <img src="election_maps/2024_District.svg" alt="District results map for the 2024 general election">
+        <h2>2024 General Election</h2>
+      </a>
+    </li>
+  </ul>
+</main>
+<footer style="padding: 16px 8px; color: #5f6f62; font-size: 0.875rem; text-align: center;">
+  &copy; Euan McGill 2026. All rights reserved.
+</footer>
+</body>
+</html>

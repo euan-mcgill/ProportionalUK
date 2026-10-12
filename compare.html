@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare | Proportional UK</title>
+<meta name="description" content="Compare FPTP, district, county and region electoral system results">
+<style>
+:root {
+  --bg: #e8f5e9;
+  --card: #ffffff;
+  --accent: #2e7d32;
+  --text: #1b2a1e;
+  --muted: #5f6f62;
+  --gutter: 8px;
+  --radius: 8px;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px var(--gutter);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(46, 125, 50, 0.15);
+}
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+nav { display: flex; flex-wrap: wrap; gap: 8px; }
+nav a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.15s, color 0.15s;
+}
+nav a:hover, nav a:focus-visible, nav a[aria-current="page"] {
+  background: var(--accent);
+  color: #fff;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+  padding: var(--gutter);
+}
+.intro { padding: 12px; }
+.intro h2 { margin-top: 0; font-size: 1.3rem; }
+.intro p { color: var(--muted); }
+.columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--gutter);
+}
+.chart-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+  min-width: 0;
+}
+.card {
+  min-width: 0;
+  padding: 12px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.card h2 { margin: 0 0 8px; font-size: 1.2rem; }
+.flourish-embed img { display: block; width: 100%; height: auto; }
+@media (max-width: 900px) {
+  header h1 { font-size: 1.2rem; }
+  .columns { grid-template-columns: minmax(0, 1fr); }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Compare</h1>
+  <nav>
+    <a href="index.html">All elections</a>
+    <a href="about.html">About</a>
+    <a href="compare.html" aria-current="page">Compare</a>
+  </nav>
+</header>
+
+<main>
+  <section class="intro" aria-labelledby="intro-title">
+    <h2 id="intro-title">Compare electoral systems</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </section>
+
+  <div class="columns">
+    <div class="chart-col">
+      <section class="card" aria-labelledby="fptp-title">
+        <h2 id="fptp-title">FPTP</h2>
+        <div class="flourish-embed flourish-chart" data-src="visualisation/29189120"><noscript><img src="https://public.flourish.studio/visualisation/29189120/thumbnail" width="100%" alt="FPTP results chart" /></noscript></div>
+      </section>
+      <section class="card" aria-labelledby="region-title">
+        <h2 id="region-title">Region</h2>
+        <div class="flourish-embed flourish-chart" data-src="visualisation/29189291"><noscript><img src="https://public.flourish.studio/visualisation/29189291/thumbnail" width="100%" alt="Region results chart" /></noscript></div>
+      </section>
+    </div>
+
+    <div class="chart-col">
+      <section class="card" aria-labelledby="district-title">
+        <h2 id="district-title">District</h2>
+        <div class="flourish-embed flourish-chart" data-src="visualisation/29189041"><noscript><img src="https://public.flourish.studio/visualisation/29189041/thumbnail" width="100%" alt="District results chart" /></noscript></div>
+      </section>
+      <section class="card" aria-labelledby="county-title">
+        <h2 id="county-title">County</h2>
+        <div class="flourish-embed flourish-chart" data-src="visualisation/29189008"><noscript><img src="https://public.flourish.studio/visualisation/29189008/thumbnail" width="100%" alt="County results chart" /></noscript></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<script src="https://public.flourish.studio/resources/embed.js"></script>
+<footer style="padding: 16px 8px; color: #5f6f62; font-size: 0.875rem; text-align: center;">
+  &copy; Euan McGill 2026. All rights reserved.
+</footer>
+</body>
+</html>
