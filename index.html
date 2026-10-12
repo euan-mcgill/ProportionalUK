@@ -56,9 +56,20 @@ nav a:hover, nav a:focus-visible, nav a[aria-current="page"] {
   color: #fff;
 }
 main { padding: var(--gutter); }
+.result-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.result-columns section { min-width: 0; }
+.result-columns h2 {
+  margin: 0 0 16px;
+  font-size: 1.4rem;
+  overflow-wrap: anywhere;
+}
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--gutter);
   margin: 0;
   padding: 0;
@@ -76,7 +87,7 @@ main { padding: var(--gutter); }
   color: var(--text);
   text-decoration: none;
 }
-.election:hover h2 { text-decoration: underline; }
+.election:hover h3 { text-decoration: underline; }
 .election:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: -3px;
@@ -87,13 +98,19 @@ main { padding: var(--gutter); }
   aspect-ratio: 1 / 1;
   object-fit: contain;
 }
-.election h2 {
+.election h3 {
   margin: 12px 0 0;
   font-size: 1.2rem;
   overflow-wrap: anywhere;
 }
 @media (max-width: 900px) {
   header h1 { font-size: 1.2rem; }
+}
+@media (max-width: 700px) {
+  .result-columns { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .gallery { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -108,20 +125,30 @@ main { padding: var(--gutter); }
 </header>
 
 <main>
-  <ul class="gallery" aria-label="Elections and polls, newest first">
-    <li>
-      <a class="election" href="2026-08.html">
-        <img src="election_maps/2026-08_District.svg" alt="District results map for the August 2026 poll">
-        <h2>August 2026 Poll</h2>
-      </a>
-    </li>
-    <li>
-      <a class="election" href="2024.html">
-        <img src="election_maps/2024_District.svg" alt="District results map for the 2024 general election">
-        <h2>2024 General Election</h2>
-      </a>
-    </li>
-  </ul>
+  <div class="result-columns">
+    <section aria-labelledby="elections-heading">
+      <h2 id="elections-heading">General elections with proportional representation</h2>
+      <ul class="gallery" aria-label="General elections, newest first">
+        <li>
+          <a class="election" href="2024.html">
+            <img src="election_maps/2024_District.svg" alt="District results map for the 2024 general election">
+            <h3>2024 General Election</h3>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section aria-labelledby="polls-heading">
+      <h2 id="polls-heading">Latest polls with proportional representation</h2>
+      <ul class="gallery" aria-label="Polls, newest first">
+        <li>
+          <a class="election" href="2026-08.html">
+            <img src="election_maps/2026-08_District.svg" alt="District results map for the August 2026 poll">
+            <h3>August 2026 Poll</h3>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
 </main>
 <footer style="padding: 16px 8px; color: #5f6f62; font-size: 0.875rem; text-align: center;">
   &copy; Euan McGill 2026. All rights reserved.
