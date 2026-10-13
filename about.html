@@ -99,7 +99,7 @@ main {
 </head>
 <body>
 <header>
-  <h1>About</h1>
+  <h1>About Proportional UK</h1>
   <nav>
     <a href="index.html">All elections</a>
     <a href="about.html" aria-current="page">About</a>
@@ -109,9 +109,9 @@ main {
 
 <main>
   <section class="card intro">
-    <h2>About ProportionalUK</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h2>Overview</h2>
+    <p align="justify">This site presents a long-term project to model <b>real election results</b> and the <b>latest opinion polls</b> using <b>party list proportional representation</b>. Many other valid (and potentially more effective) <a href="https://en.wikipedia.org/wiki/Proportional_representation#Types">implementations of PR</a>, but this site focuses on party list proportional using the <a href="https://youtu.be/6CU3F3ToIIg?si=64i4bOOwNELXHwMc">D'Hondt method</a> only - and compares the results with the current system: First past the post. One benefit of this method (especially "District" or "County" based constituencies) is that it retains three features which are preferred by the British public: (1) One person, one vote on a single ballot paper; (2) elected representatives which are connected to geographically-relevant constituencies; and (3) much less reliance on tactical voting.</p>
+    <p align="justify">This page shows election maps for the UK divided into, in order, constituencies which are derived from districts of strictly 4-7 member constituencies, historic counties (based on election maps from the <a href="https://www.electoralcalculus.co.uk/flatfile.html">Electoral Calculus</a> site), and finally the countries and regions used as constituencies in former British elections to the European Parliament (which also used party list PR with the D'Hondt method!). In the left (on browser) or first set of (on mobile) tiles are labelled seat maps In the right (on browser) or second set of (on mobile) tiles are seat total maps. At the bottom of this page, there is an in-depth <a href="#detail">rationale for switching to PR in the UK</a>.</p>
   </section>
 
   <div class="columns">
@@ -159,6 +159,16 @@ main {
       </div>
     </section>
   </div>
+
+  <section id="detail" class="card intro">
+    <h2>Rationale</h2>
+    <p align="justify"> British democracy consistently evolves with the times, as is the nature of our <a href="https://en.wikipedia.org/wiki/Constitution_of_the_United_Kingdom#Principles">unwritten constitution</a>, to suit the needs and hear the voices of all the people. In the current system members of parliament are elected to a lower and upper house. The lower House of Commons is made up of 650 single-member constituencies. Whoever receives the plurality of votes in a constituency gains a seat in parliament. In an extreme example, Belfast South was won by just 24.5% of the vote in 2015 — reflecting less than a quarter of that constituency’s preference. In the upper House of Lords, all members are appointed for life - giving the public no say on the members of the upper house who scrutinise legislation. A system where large governing majorities are won by around 40% of the vote, and where one house is completely unelected, immediately seems unrepresentative.</p>
+
+    <p align="justify">There have been many studies into implementing a form of PR at individual elections (<a href="https://www.tandfonline.com/doi/abs/10.1080/13572339808420557">1998</a>, <a href="https://blogs.lse.ac.uk/politicsandpolicy/what-would-the-election-look-like-under-pr/">2015</a>, <a href="https://www.electoral-reform.org.uk/how-the-2019-election-results-could-have-looked-with-proportional-representation/">2019</a>), but not how one method would have shaped the face of British politics over time. We use historical General Election data to model previous elections as if they were conducted through proportional representation in multi-member geographical constituencies. This page also examines proposals made by the Cameron-Clegg coalition, and later discussed by the Brown Commission and Labour party, to reform the House of Lords to a mostly-elected chamber.</p>
+
+    <p align="justify">The scripts and data used to generate these results can be found, reproduced, and ran through <a href="https://github.com/euan-mcgill/euan-projects/tree/master/pol">this GitHub repo</a> <i class="fa-brands fa-github"></i> (Embedded tool coming soon!)</p>
+  </section>
+
 </main>
 <footer style="padding: 16px 8px; color: #5f6f62; font-size: 0.875rem; text-align: center;">
   &copy; Euan McGill 2026. All rights reserved.
