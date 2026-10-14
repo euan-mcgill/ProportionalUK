@@ -73,11 +73,13 @@ main {
 .columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
   gap: var(--gutter);
 }
 .map-col {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
   gap: var(--gutter);
   min-width: 0;
 }
@@ -100,7 +102,15 @@ main {
   vertical-align: middle;
 }
 @media (max-width: 900px) {
-  .columns { grid-template-columns: 1fr; }
+  .columns {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .map-col {
+    display: flex;
+    flex-direction: column;
+    grid-row: auto;
+  }
 }
 </style>
 </head>
@@ -131,7 +141,6 @@ main {
         </object>
         <p>Largest constituency (area): Highlands and Islands</p>
         <p>Smallest constituency (area): Hackney and Tower Hamlets</p>
-        <p><br></p>
       </div>
       <div class="card">
         <h3>County</h3>
@@ -140,7 +149,6 @@ main {
         </object>
         <p>Largest constituency (area): Highland</p>
         <p>Smallest constituency (area): Hackney</p>
-        <p><br></p>
       </div>
       <div class="card">
         <h3>Region</h3>
@@ -149,7 +157,6 @@ main {
         </object>
         <p>Largest constituency (area): Scotland</p>
         <p>Smallest constituency (area): London</p>
-        <p><br></p>
       </div>
     </section>
 
