@@ -112,6 +112,16 @@ main { padding: var(--gutter); }
   font-size: 1.2rem;
   overflow-wrap: anywhere;
 }
+.map-availability {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin: 8px 0 0;
+  font-size: 0.875rem;
+}
+.map-availability > span { white-space: nowrap; }
+.map-available { color: var(--accent); font-weight: 700; }
+.map-unavailable { color: #b3261e; font-weight: 700; }
 @media (max-width: 900px) {
   header h1 { font-size: 1.2rem; }
 }
@@ -147,6 +157,11 @@ main { padding: var(--gutter); }
           <a class="election" href="./election/2024.html">
             <img src="./election_maps/2024_District.svg" alt="District results map for the 2024 general election">
             <h3>2024 General Election</h3>
+            <p class="map-availability">
+              <span>District <span class="map-available" role="img" aria-label="map available">&#10003;</span></span>
+              <span>County <span class="map-unavailable" role="img" aria-label="map unavailable">&#10007;</span></span>
+              <span>Region <span class="map-available" role="img" aria-label="map available">&#10003;</span></span>
+            </p>
           </a>
         </li>
       </ul>
@@ -158,36 +173,66 @@ main { padding: var(--gutter); }
           <a class="election" href="./election/2026-09.html">
             <img src="./election_maps/2026-09_District.svg" alt="District results map for the September 2026 poll">
             <h3>September 2026 Poll</h3>
+            <p class="map-availability">
+              <span>District <span class="map-available" role="img" aria-label="map available">&#10003;</span></span>
+              <span>County <span class="map-unavailable" role="img" aria-label="map unavailable">&#10007;</span></span>
+              <span>Region <span class="map-unavailable" role="img" aria-label="map unavailable">&#10007;</span></span>
+            </p>
           </a>
         </li>
         <li>
           <a class="election" href="./election/2026-08.html">
             <img src="./election_maps/2026-08_District.svg" alt="District results map for the August 2026 poll">
             <h3>August 2026 Poll</h3>
+            <p class="map-availability">
+              <span>District <span class="map-available" role="img" aria-label="map available">&#10003;</span></span>
+              <span>County <span class="map-available" role="img" aria-label="map available">&#10003;</span></span>
+              <span>Region <span class="map-available" role="img" aria-label="map available">&#10003;</span></span>
+            </p>
           </a>
         </li>
         <li>
           <a class="election" href="./election/2026-05.html">
             <img src="./election_maps/2026-05_District.svg" alt="District results map for the May 2026 poll">
             <h3>May 2026 Poll</h3>
+            <p class="map-availability">
+              <span>District <span class="map-available" role="img" aria-label="map available">&#10003;</span></span>
+              <span>County <span class="map-unavailable" role="img" aria-label="map unavailable">&#10007;</span></span>
+              <span>Region <span class="map-unavailable" role="img" aria-label="map unavailable">&#10007;</span></span>
+            </p>
           </a>
         </li>
         <li>
           <a class="election" href="./election/2026-04.html">
             <img src="./election_maps/2026-04_District.svg" alt="District results map for the April 2026 poll">
             <h3>April 2026 Poll</h3>
+            <p class="map-availability">
+              <span>District <span class="map-available" role="img" aria-label="map available">&#10003;</span></span>
+              <span>County <span class="map-unavailable" role="img" aria-label="map unavailable">&#10007;</span></span>
+              <span>Region <span class="map-unavailable" role="img" aria-label="map unavailable">&#10007;</span></span>
+            </p>
           </a>
         </li>
         <li>
           <a class="election" href="./election/2026-02.html">
             <img src="./election_maps/2026-02_District.svg" alt="District results map for the February 2026 poll">
             <h3>February 2026 Poll</h3>
+            <p class="map-availability">
+              <span>District <span class="map-available" role="img" aria-label="map available">&#10003;</span></span>
+              <span>County <span class="map-unavailable" role="img" aria-label="map unavailable">&#10007;</span></span>
+              <span>Region <span class="map-unavailable" role="img" aria-label="map unavailable">&#10007;</span></span>
+            </p>
           </a>
         </li>
         <li>
           <a class="election" href="./election/2025-12.html">
             <img src="./election_maps/2025-12_District.svg" alt="District results map for the December 2025 poll">
             <h3>December 2025 Poll</h3>
+            <p class="map-availability">
+              <span>District <span class="map-available" role="img" aria-label="map available">&#10003;</span></span>
+              <span>County <span class="map-unavailable" role="img" aria-label="map unavailable">&#10007;</span></span>
+              <span>Region <span class="map-unavailable" role="img" aria-label="map unavailable">&#10007;</span></span>
+            </p>
           </a>
         </li>
       </ul>
