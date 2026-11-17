@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>September 2026 Poll | ProportionalUK</title>
+<meta name="description" content="Proportional representation results for September 2026 Poll">
+<style>
+:root {
+  --bg: #e8f5e9;
+  --card: #ffffff;
+  --accent: #2e7d32;
+  --text: #1b2a1e;
+  --muted: #5f6f62;
+  --gutter: 8px;
+  --radius: 12px;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px var(--gutter);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(46, 125, 50, 0.15);
+}
+header h1 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+}
+nav { display: flex; flex-wrap: wrap; gap: 8px; }
+nav a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.15s, color 0.15s;
+}
+nav a:hover, nav a:focus-visible {
+  background: var(--accent);
+  color: #fff;
+}
+main {
+  display: flex;
+  gap: var(--gutter);
+  padding: var(--gutter);
+}
+.map-col {
+  flex: 0 0 58%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+}
+.side-col {
+  flex: 1 1 42%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+}
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 12px;
+}
+.map-col object, .map-col img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.charts .flourish-embed { margin-bottom: 12px; }
+.charts .flourish-embed:last-child { margin-bottom: 0; }
+.notes h2 { margin-top: 0; font-size: 1.2rem; }
+.notes p { color: var(--muted); }
+@media (max-width: 900px) {
+  main { flex-direction: column; }
+  .map-col { flex-basis: auto; }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>October 2026 Poll</h1>
+  <nav>
+    <a href="../index.html">All elections</a>
+    <a href="../about.html">About</a>
+    <a href="../compare.html">Compare</a>
+  </nav>
+</header>
+
+<main>
+  <section class="map-col" aria-label="Election maps">
+    <div class="card">
+      <object type="image/svg+xml" data="../election_maps/2026-10_District.svg" aria-label="Map of October 2026 results by district">
+        <img src="../election_maps/2026-09_District.svg" alt="Map of September 2026 results by district">
+      </object>
+      <p>Election map is zoomable on this page, but it can also be expanded in a <a href="../election_maps/2026-10_District.svg" target="_blank" rel="noopener noreferrer">new tab</a></p>
+    </div>
+  </section>
+
+  <aside class="side-col">
+    <section class="card notes">
+      <h2>Overview</h2>
+      <p>Labour's upward trajectory continues through October as Burnham has refreshed Labour's image since his elevation. However, these poll results may not reflect sentiment on the autumn budget statement as this was delivered late in the month. This set of polls appears to be the most similar <a href="../compare.html">comparison</a> to the <a href="./2024.html">2024 election</a> yet. Labour now hold a plurality in the entirety of the North of England. In addition, there has been a large swing in Scotland's central belt to Labour from the SNP (though the SNP keep the plurality of Scottish seats). Compared to their height a year ago, Reform's support now only remains in larger numbers in coastal towns and urban peripheries. The Conservatives appear to have benefitted most from this swing, and rise to second place.</p>
+      <p>The shifts in poll numbers appear more stark in first-past-the-post, which strongly favours the winner. Proportional modelling more accurately reflects the gradual shift in support as well as the popular support of each party.</p>
+    </section>
+    <section class="card charts" aria-label="Results charts">
+      <div class="flourish-embed flourish-parliament" data-src="visualisation/30898118"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30898118/thumbnail" width="100%" alt="parliament visualization" /></noscript></div><div class="flourish-fallback" data-for="visualisation/30898118"><a href="https://public.flourish.studio/visualisation/30898118/visualisation.json?ref=embed-script">https://public.flourish.studio/visualisation/30898118/visualisation.json?ref=embed-script</a></div>
+    </section>
+    <section class="card notes">
+      <h2>Notes</h2>
+      <p>Commentary on the October 2026 poll results coming soon here.</p>
+      <h2>Possible government formation:</h2>
+      <p>Using PR by 4-7 seat Districts, governments could have possibly been formed as follows (note that Sinn Féin do not take their seats)...</p>
+      <p>National unity government [Lab-Con-Lib] (433 seats, 211 opposition):</p>
+      <p>(Image coming soon)</p>
+      <p>"Traffic light" minority [Lab-Lib-Green] (305 seats, 358 opposition):</p>
+      <p>(Image coming soon)</p>
+      <p>Conservative-Reform + NI allies minority (301 seats, 343 opposition):</p>
+      <p>(Image coming soon)</p>
+    </section>
+  </aside>
+</main>
+<script src="https://public.flourish.studio/resources/embed.js"></script>
+<footer style="padding: 16px 8px; color: #5f6f62; font-size: 0.875rem; text-align: center;">
+  &copy; Euan McGill 2026. All rights reserved.
+</footer>
+</body>
+</html>
